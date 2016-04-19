@@ -1,0 +1,81 @@
+{
+    "__comment__":[ " This is a example of an application's configuration file.",
+                    " The type of an object can be set on configuration level. Objects with such capabilities",
+                    " are called OfObjects (ObjectFactory Objects, see the key below). ",
+                    " Each OfObject has its own configuration node."
+                  ],
+    "OfObjects":
+    {
+        "TraceMonitor":
+        {
+            "__comment__"  :[ " A TraceMonitor is an OfObject which could be ",
+                              " wether Remote or Local for example Notice the namespace 'meta'",
+                              " which is the module which the class is defined.",
+                              " If an OfObject is required as a dependency to be injected, it will",
+                              " be automatically created if AutoCreate is set to true. Otherwise," ,
+                              " and Exception will be raised."
+                            ],
+            "InstanceOf" : "meta.RemoteTraceMonitor",
+            "AutoCreate" : true,
+
+            "maxSize"    : 80,
+            "traceLevels":
+             [
+                "Debug",
+                "Warning",
+                "Critical",
+                "Ouch!"
+             ],
+
+            "ComposedOf" :
+            [
+            ],
+
+            "Objects"    :
+            {
+            }
+        },
+
+
+        "Sasuke":
+        {
+            "__comment__":"This is an OfObject composed of other OfObject dependencies",
+        	"InstanceOf" : "meta.A",
+        	"AutoCreate" : true,
+
+        	"level"		 : 100,
+
+        	"ComposedOf" :
+            [
+                "shortweapon",
+                "bigweapon"
+            ],
+
+        	"Objects"	 :
+        	{
+        		"shortweapon" :
+        		{
+        			"InstanceOf" : "weapon_collection.Kunai",
+        			"AutoCreate" : true,
+        			"damage"     : 10
+        		},
+
+                "bigweapon" :
+                {
+                    "InstanceOf" : "weapon_collection.Katana",
+                    "AutoCreate" : true,
+                    "damage"     : 50
+                }
+
+        	}
+    	},
+        "UnServiceUtilisateur":
+        {
+            "InstanceOf" : "meta.A",
+        	"AutoCreate" : true,
+        	"level"		 : 100
+
+        }
+
+    }
+}
