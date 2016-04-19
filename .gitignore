@@ -40,3 +40,4 @@ nosetests.xml
 *.asta
 *.pyy
 *.old*
+user.py
