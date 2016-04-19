@@ -60,6 +60,6 @@ class TestConfig(unittest.TestCase):
 
     def test_store(self):
         self.config.set_value('Objects.shortweapon.damage', 2000)
-        self.config_reader.store('samples/test_store_with_OfObjects.Sasuke.Objects.shortweapon.damage_value_is_2000.json')
+        self.config_reader.store('examples/test_store_with_OfObjects.Sasuke.Objects.shortweapon.damage_value_is_2000.json')
         self.config.set_value('Objects.shortweapon.damage', 5000)
-        self.config_reader.store('samples/test_store_with_Sasuke.shortweapon.damage_is_5000.json' )
+        self.config_reader.store('examples/test_store_with_Sasuke.shortweapon.damage_is_5000.json' )

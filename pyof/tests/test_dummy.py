@@ -24,12 +24,9 @@ class TestPyof(unittest.TestCase):
         assert 3==3
 
     def test_relative_import(self):
-        try:
-            raise errors.NotAnOfObject('Docker')
-        except errors.NotAnOfObject as e:
-            print '>>> Error : {0}'.format(e)
-            #raise AssertionError
-        
-        
+        assert 3==3
+
+
+
     def tearDown(self):
         pass

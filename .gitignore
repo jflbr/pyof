@@ -36,6 +36,7 @@ nosetests.xml
 .pydevproject
 .DS_Store
 .activity
-.ep
-.asta
-.pyy
+*.ep
+*.asta
+*.pyy
+*.old*
