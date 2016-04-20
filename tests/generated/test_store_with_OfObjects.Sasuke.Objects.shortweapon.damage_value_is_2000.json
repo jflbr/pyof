@@ -1,7 +1,44 @@
 {
     "OfObjects": {
+        "UnServiceUtilisateur": {
+            "level": 100, 
+            "AutoCreate": true, 
+            "InstanceOf": "meta.A"
+        }, 
+        "Sasuke": {
+            "Objects": {
+                "bigweapon": {
+                    "AutoCreate": true, 
+                    "InstanceOf": "weapon_collection.Katana", 
+                    "damage": 50
+                }, 
+                "shortweapon": {
+                    "AutoCreate": true, 
+                    "InstanceOf": "weapon_collection.Kunai", 
+                    "damage": 2000
+                }
+            }, 
+            "AutoCreate": true, 
+            "InstanceOf": "meta.A", 
+            "ComposedOf": [
+                "shortweapon", 
+                "bigweapon"
+            ], 
+            "level": 100, 
+            "__comment__": "This is an OfObject composed of other OfObject dependencies"
+        }, 
         "TraceMonitor": {
             "Objects": {}, 
+            "AutoCreate": true, 
+            "traceLevels": [
+                "Debug", 
+                "Warning", 
+                "Critical", 
+                "Ouch!"
+            ], 
+            "InstanceOf": "meta.RemoteTraceMonitor", 
+            "ComposedOf": [], 
+            "maxSize": 80, 
             "__comment__": [
                 " A TraceMonitor is an OfObject which could be ", 
                 " wether Remote or Local for example Notice the namespace 'meta'", 
@@ -9,44 +46,7 @@
                 " If an OfObject is required as a dependency to be injected, it will", 
                 " be automatically created if AutoCreate is set to true. Otherwise,", 
                 " and Exception will be raised."
-            ], 
-            "maxSize": 80, 
-            "traceLevels": [
-                "Debug", 
-                "Warning", 
-                "Critical", 
-                "Ouch!"
-            ], 
-            "ComposedOf": [], 
-            "AutoCreate": true, 
-            "InstanceOf": "meta.RemoteTraceMonitor"
-        }, 
-        "Sasuke": {
-            "Objects": {
-                "shortweapon": {
-                    "AutoCreate": true, 
-                    "damage": 2000, 
-                    "InstanceOf": "weapon_collection.Kunai"
-                }, 
-                "bigweapon": {
-                    "AutoCreate": true, 
-                    "damage": 50, 
-                    "InstanceOf": "weapon_collection.Katana"
-                }
-            }, 
-            "__comment__": "This is an OfObject composed of other OfObject dependencies", 
-            "ComposedOf": [
-                "shortweapon", 
-                "bigweapon"
-            ], 
-            "AutoCreate": true, 
-            "level": 100, 
-            "InstanceOf": "meta.A"
-        }, 
-        "UnServiceUtilisateur": {
-            "AutoCreate": true, 
-            "level": 100, 
-            "InstanceOf": "meta.A"
+            ]
         }
     }, 
     "__comment__": [
