@@ -11,7 +11,7 @@
             "__comment__"  :[ " The key TraceMonitor is an OfObject which could be ",
                               " wether Remote or Local for example. Notice the namespace 'meta'.",
                               " This is the module in which the class is defined.",
-                              " If an OfObject that still not exist is required as a dependency to be injected, it will",
+                              " If an OfObject that does not exist yet is required as a dependency to be injected, it will",
                               " be automatically created if AutoCreate paramter is set to true. Otherwise," ,
                               " an Exception will be raised."
                             ],
