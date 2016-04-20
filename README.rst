@@ -1,10 +1,6 @@
 pyof
 ====
 
-.. image:: https://pypip.in/v/pyof/badge.png
-    :target: https://pypi.python.org/pypi/pyof
-    :alt: Latest PyPI version
-
 .. image:: https://travis-ci.org/jflbr/pyof.png
    :target: https://travis-ci.org/jflbr/pyof
    :alt: Latest Travis CI build status
@@ -16,18 +12,11 @@ By combining both, it will e.g allow you to create an object with a type set on 
 
 Usage
 -----
+TODO
 
 Installation
 ------------
-
-Requirements
-^^^^^^^^^^^^
-
-Compatibility
--------------
-
-Licence
--------
+TODO
 
 Authors
 -------
