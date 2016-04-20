@@ -1,5 +1,5 @@
 {
-    "__comment__":[ " This is a example of an application's configuration file.",
+    "__comment__":[ " This is an example of an application's configuration file.",
                     " The type of an object can be set on configuration level. Objects with such capabilities",
                     " are called OfObjects (ObjectFactory Objects, see the key below). ",
                     " Each OfObject has its own configuration node."
@@ -8,12 +8,12 @@
     {
         "TraceMonitor":
         {
-            "__comment__"  :[ " A TraceMonitor is an OfObject which could be ",
-                              " wether Remote or Local for example Notice the namespace 'meta'",
-                              " which is the module which the class is defined.",
-                              " If an OfObject is required as a dependency to be injected, it will",
-                              " be automatically created if AutoCreate is set to true. Otherwise," ,
-                              " and Exception will be raised."
+            "__comment__"  :[ " The key TraceMonitor is an OfObject which could be ",
+                              " wether Remote or Local for example. Notice the namespace 'meta'.",
+                              " This is the module in which the class is defined.",
+                              " If an OfObject that still not exist is required as a dependency to be injected, it will",
+                              " be automatically created if AutoCreate paramter is set to true. Otherwise," ,
+                              " an Exception will be raised."
                             ],
             "InstanceOf" : "meta.RemoteTraceMonitor",
             "AutoCreate" : true,
