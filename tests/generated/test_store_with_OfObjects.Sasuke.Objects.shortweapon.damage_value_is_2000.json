@@ -1,0 +1,58 @@
+{
+    "OfObjects": {
+        "TraceMonitor": {
+            "Objects": {}, 
+            "__comment__": [
+                " A TraceMonitor is an OfObject which could be ", 
+                " wether Remote or Local for example Notice the namespace 'meta'", 
+                " which is the module which the class is defined.", 
+                " If an OfObject is required as a dependency to be injected, it will", 
+                " be automatically created if AutoCreate is set to true. Otherwise,", 
+                " and Exception will be raised."
+            ], 
+            "maxSize": 80, 
+            "traceLevels": [
+                "Debug", 
+                "Warning", 
+                "Critical", 
+                "Ouch!"
+            ], 
+            "ComposedOf": [], 
+            "AutoCreate": true, 
+            "InstanceOf": "meta.RemoteTraceMonitor"
+        }, 
+        "Sasuke": {
+            "Objects": {
+                "shortweapon": {
+                    "AutoCreate": true, 
+                    "damage": 2000, 
+                    "InstanceOf": "weapon_collection.Kunai"
+                }, 
+                "bigweapon": {
+                    "AutoCreate": true, 
+                    "damage": 50, 
+                    "InstanceOf": "weapon_collection.Katana"
+                }
+            }, 
+            "__comment__": "This is an OfObject composed of other OfObject dependencies", 
+            "ComposedOf": [
+                "shortweapon", 
+                "bigweapon"
+            ], 
+            "AutoCreate": true, 
+            "level": 100, 
+            "InstanceOf": "meta.A"
+        }, 
+        "UnServiceUtilisateur": {
+            "AutoCreate": true, 
+            "level": 100, 
+            "InstanceOf": "meta.A"
+        }
+    }, 
+    "__comment__": [
+        " This is a example of an application's configuration file.", 
+        " The type of an object can be set on configuration level. Objects with such capabilities", 
+        " are called OfObjects (ObjectFactory Objects, see the key below). ", 
+        " Each OfObject has its own configuration node."
+    ]
+}

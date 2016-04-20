@@ -8,9 +8,7 @@ Tests for `dummy` module.
 """
 
 import unittest
-#from .. import errors
 from pyof import errors
-
 
 class TestPyof(unittest.TestCase):
 

@@ -8,8 +8,8 @@ Tests for `decorators` module.
 """
 
 import unittest
-from .. import config
-from .. import decorators
+from pyof import config
+from pyof import decorators
 
 
 

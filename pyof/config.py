@@ -7,9 +7,11 @@ import json
 
 #from . import errors
 #import errors
+import os
 
 
-_default_cfg_file = "/Users/jfl/Documents/Workspaces/Repositories/pyof/pyof/application.json"
+_current_dir = os.path.dirname(__file__)
+_default_cfg_file = os.path.join(_current_dir, "../examples/application.json")
 
 
 
