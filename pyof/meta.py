@@ -6,7 +6,7 @@ class CfgObject(object):
     """
         docstring for MetaObject
         A base class with some helper methods to easilly
-        access data through a local configuration node
+        access dato of a object's configuration node
     """
 
     def __init__(self,*arg,**kwargs):
@@ -56,7 +56,9 @@ class CfgObject(object):
         return Factory.new_object( self.object_path(name), meta=True)
 
 
-
+#
+# Dummy code to make some quick 'tests'
+#
 
 class A(CfgObject):
     """docstring for A"""
@@ -65,8 +67,6 @@ class A(CfgObject):
 
     def greeting(self):
         print "Hello, world!"
-
-
 
 class RemoteTraceMonitor(CfgObject):
     """docstring for A"""
@@ -77,31 +77,23 @@ class RemoteTraceMonitor(CfgObject):
         return self.get_value("traceLevels")
 
 
-
-
 def main():
-    #mo=MetaObject()
-    #A().greeting()
+    #in the configuration file(see examples folder), Sasuke is an instance of meta.A
+    sasukeObject=Factory.new_object('OfObjects.Sasuke' )
 
-    # config_reader = LocalConfigReader()
-    # config        = config_reader.get_config( 'OfObjects.Sasuke' )
+    traceMon = Factory.new_object("OfObjects.TraceMonitor")
 
-    # mo=A(cfg=config)
-    mo=Factory.new_object('OfObjects.Sasuke' )
-
-    trc = Factory.new_object("OfObjects.TraceMonitor")
-
-    print 'Monitor: ',trc.type()
-    print 'Level list: ', trc.level_list()
-    #mo.config = {'hey':'there!'}
-    print mo.config
-    print 'objects: ',mo.objects
-    print 'shortweapon  path: ', mo.object_path('shortweapon')
-    print 'bigweapon  path: ', mo.object_path('bigweapon')
-    print 'name: ', mo.name
-    print 'level: ', mo.get_value('level')
-    print 'AutoCreate: ', mo.get_value('AutoCreate')
-    print 'shortweapon type: ', mo.type('shortweapon')
+    print 'Monitor type: ',traceMon.type()
+    print 'Monito\'s trace level list: ', traceMon.level_list()
+    #sasukeObject.config = {'hey':'there!'}
+    print sasukeObject.config
+    print 'objects: ',sasukeObject.objects
+    print 'shortweapon  path: ', sasukeObject.object_path('shortweapon')
+    print 'bigweapon  path: ', sasukeObject.object_path('bigweapon')
+    print 'name: ', sasukeObject.name
+    print 'level: ', sasukeObject.get_value('level')
+    print 'AutoCreate: ', sasukeObject.get_value('AutoCreate')
+    print 'shortweapon type: ', sasukeObject.type('shortweapon')
 
 
     #a = Factory.new_object('OfObjects.Sasuke' )
